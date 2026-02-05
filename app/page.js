@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ShoppingBag, Users, Briefcase, GraduationCap, Home, MessageCircle, User, PlusSquare } from 'lucide-react';
+import { ShoppingBag, Users, Briefcase, GraduationCap, Home, MessageCircle, User, Plus } from 'lucide-react';
 
 export default function LandingPage() {
   return (
@@ -24,9 +24,6 @@ export default function LandingPage() {
           <p>
             내 주변 한인들과 나누는<br />따뜻한 일상 이야기
           </p>
-          <div className="hero-btns">
-            <button className="btn-primary" style={{ padding: '0.6rem 1.2rem', fontSize: '0.9rem' }}>앱 설치하기</button>
-          </div>
         </div>
       </section>
 
@@ -82,6 +79,30 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Floating Action Button (글쓰기) */}
+      <button 
+        className="fab"
+        style={{
+          position: 'fixed',
+          bottom: '90px',
+          right: 'calc(50% - 280px)',
+          width: '56px',
+          height: '56px',
+          borderRadius: '50%',
+          background: '#3b82f6',
+          border: 'none',
+          boxShadow: '0 4px 12px rgba(59, 130, 246, 0.4)',
+          color: '#fff',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          cursor: 'pointer',
+          zIndex: 1002
+        }}
+      >
+        <Plus size={28} />
+      </button>
+
       {/* Bottom Navigation Bar */}
       <div className="bottom-nav">
         <a href="#" className="nav-item active">
@@ -92,22 +113,6 @@ export default function LandingPage() {
           <ShoppingBag size={24} />
           <span>거래</span>
         </a>
-        <div className="nav-item" style={{ marginTop: '-24px' }}>
-          <div style={{ 
-            width: '48px', 
-            height: '48px', 
-            background: '#3b82f6', 
-            borderRadius: '50%', 
-            display: 'flex', 
-            alignItems: 'center', 
-            justifyContent: 'center', 
-            boxShadow: '0 4px 10px rgba(59, 130, 246, 0.4)', 
-            color: '#fff' 
-          }}>
-            <PlusSquare size={24} />
-          </div>
-          <span style={{ marginTop: '4px' }}>글쓰기</span>
-        </div>
         <a href="#" className="nav-item">
           <MessageCircle size={24} />
           <span>채팅</span>
